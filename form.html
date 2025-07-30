@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NGO Partnership Request Form</title>
+</head>
+<body style="background-color: antiquewhite;">
+    <h1>NGO Partnership Request Form</h1>
+    <a href="https://ngosindia.com/">NGOs India</a>
+    <h4>Please fill out this form</h4>
+
+    <form action="/serverlogic" method="post">
+        <fieldset style="width: 1000px; padding: 20px;">
+            <legend><strong>Organization Details</strong></legend>
+            <table>
+
+                <tr>
+                    <td><label for="search">Search if NGO is already Registered:</label></td>
+                    <td><input type="search" id="search" name="search" placeholder="e.g., Search NGO name" style="width: 500px;" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="ngoName">Name of the NGO as Registered:</label></td>
+                    <td><input type="text" id="ngoName" name="ngoName" placeholder="e.g., Save Earth Foundation" style="width: 500px;" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="firstName">Full Name:</label></td>
+                    <td>
+                        <input type="text" id="firstName" name="firstName" placeholder="First name" required>
+                        <input type="text" id="lastName" name="lastName" placeholder="Last name" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">Email Address:</label></td>
+                    <td><input type="email" id="email" name="email" placeholder="example@gmail.com" style="width: 500px;" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="password" id="password" name="password" placeholder="Password" style="width: 500px;" minlength="6" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="phone">Phone Number:</label></td>
+                    <td><input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" pattern="[0-9]{10}" style="width: 500px;" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="regNo">Registration Number & Date:</label></td>
+                    <td>
+                        <input type="text" id="regNo" name="regNo" placeholder="reg-number" required>
+                        <input type="date" id="regDate" name="regDate" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="act">Act of law under which NGO is registered:</label></td>
+                    <td><input type="text" id="act" name="act" placeholder="e.g., Societies Registration Act, 1890" style="width: 500px;" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="head">Head Office Location:</label></td>
+                    <td><textarea id="head" name="head" rows="3" placeholder="e.g., Delhi, Pune, Nagpur" style="width: 500px;" required></textarea></td>
+                </tr>
+
+                <tr>
+                    <td><label for="project">Project Office Location:</label></td>
+                    <td><textarea id="project" name="project" rows="3" placeholder="e.g., Delhi, Pune, Nagpur" style="width: 500px;" required></textarea></td>
+                </tr>
+
+                <tr>
+                    <td><label for="reach">Geographic Reach / Areas with Ongoing Projects:</label></td>
+                    <td><textarea id="reach" name="reach" rows="3" placeholder="e.g., Rural Maharashtra and Gujarat" style="width: 500px;" required></textarea></td>
+                </tr>
+
+                <tr>
+                    <td><label for="purpose">Purpose of Partnership:</label></td>
+                    <td><input type="text" id="purpose" name="purpose" placeholder="e.g., joint education program, health camp, etc." style="width: 500px;" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="upload">Project Pictures:</label></td>
+                    <td><input type="file" id="upload" name="upload" accept="image/*" multiple required></td>
+                </tr>
+
+                <tr>
+                    <td><label>Areas of Interest:</label></td>
+                    <td>
+                        <input type="checkbox" id="education" name="interest[]" value="Education" required><label for="education">Education</label>
+                        <input type="checkbox" id="health" name="interest[]" value="Health"><label for="health">Health</label>
+                        <input type="checkbox" id="environment" name="interest[]" value="Environment"><label for="environment">Environment</label>
+                        <input type="checkbox" id="women" name="interest[]" value="Women"><label for="women">Women Empowerment</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Partnership Type:</label></td>
+                    <td>
+                        <input type="radio" id="funding" name="partnership" value="Funding" required><label for="funding">Funding</label>
+                        <input type="radio" id="volunteering" name="partnership" value="Volunteering"><label for="volunteering">Volunteering</label>
+                        <input type="radio" id="event" name="partnership" value="Event"><label for="event">Event Collab</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="progress">Form Completion:</label></td>
+                    <td><progress id="progress" value="75" max="100"></progress></td>
+                </tr>
+
+                <tr>
+                    <td><button type="submit">Submit</button></td>
+                    <td><button type="reset">Reset</button></td>
+                </tr>
+
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>
